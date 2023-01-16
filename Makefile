@@ -3,7 +3,7 @@ CFLAGS = -Wall -g -fPIC
 
 all: graph
 
-graph:  graph.o main.o priority_queue.o
+graph:  graph.o main.o 
 	$(CC) $(CFLAGS) $^ -o $@
 
 
