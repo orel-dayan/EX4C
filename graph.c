@@ -4,11 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 // ------------------ Graph ------------------
 
 void build_graph_cmd(pnode *head)
 {
-    int input; 
+    int input;
     scanf("%d", &input);
     pnode src = find_node(input, *head);
     pedge before = NULL;

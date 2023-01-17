@@ -1,9 +1,5 @@
 #ifndef GRAPH_
 #define GRAPH_
-#include <stdio.h>
-#include <stdlib.h>
-#include <float.h>
-#include <limits.h>
 
 typedef struct GRAPH_NODE_ *pnode;
 
@@ -14,13 +10,6 @@ typedef struct edge_
     struct edge_ *next;
 } edge, *pedge;
 
-typedef struct queueNode
-{
-    pnode data;
-    int priority;
-    struct queueNode *next;
-} qnode;
-
 typedef struct GRAPH_NODE_
 {
     int node_num;
@@ -29,6 +18,13 @@ typedef struct GRAPH_NODE_
     struct GRAPH_NODE_ *next;
 
 } node, *pnode;
+
+typedef struct queueNode
+{
+    pnode data;
+    int priority;
+    struct queueNode *next;
+} qnode;
 
 //********* helper for create node and edge *********
 
