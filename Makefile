@@ -1,14 +1,15 @@
 CC = gcc
-CFLAGS = -Wall -g -fPIC
+FLAGS = -Wall -g -fPIC
+
 
 all: graph
 
-graph:  graph.o main.o 
-	$(CC) $(CFLAGS) $^ -o $@
+graph:  graph.o main.o
+	$(CC) $(FLAGS) $^ -o $@
 
 
 %.o:%.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(FLAGS) -c $^ -o $@
 
 clean:
 	rm  *.o graph

@@ -8,7 +8,7 @@
 
 void build_graph_cmd(pnode *head)
 {
-    int input;
+    int input; 
     scanf("%d", &input);
     pnode src = find_node(input, *head);
     pedge before = NULL;
@@ -197,9 +197,8 @@ pnode find_node(int d, pnode head)
     while (head != NULL)
     {
         if (head->node_num == d)
-        {
             return head;
-        }
+
         head = head->next;
     }
     return NULL;
@@ -209,9 +208,8 @@ pnode create_new_node(int len)
 {
     pnode head = NULL;
     for (int i = len- 1; i >= 0; i--)
-    {
         head = new_node(i, head);
-    }
+
     return head;
 }
 
@@ -376,7 +374,7 @@ void push(qnode **head, pnode d, int p)
     else
     {
         while (start->next != NULL && start->next->priority < p)
-                start = start->next;
+            start = start->next;
 
         temp->next = start->next;
         start->next = temp;
