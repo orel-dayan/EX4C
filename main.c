@@ -7,7 +7,7 @@
 int main()
 {
     char action;
-    int key;
+    int len;
     pnode head = NULL;
     while (scanf("%c", &action) != EOF)
     {
@@ -15,8 +15,8 @@ int main()
         {
         case 'A':
             deleteGraph_cmd(&head);
-            scanf("%d", &key);
-            head = create_new_node(key);
+            scanf("%d", &len);
+            head = create_new_node(len);
             break;
         case 'n':
             build_graph_cmd(&head);

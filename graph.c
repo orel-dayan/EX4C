@@ -205,10 +205,10 @@ pnode find_node(int d, pnode head)
     return NULL;
 }
 
-pnode create_new_node(int key)
+pnode create_new_node(int len)
 {
     pnode head = NULL;
-    for (int i = key - 1; i >= 0; i--)
+    for (int i = len- 1; i >= 0; i--)
     {
         head = new_node(i, head);
     }
@@ -353,9 +353,9 @@ int is_empty(qnode **head)
 pnode pop(qnode **head)
 {
     pnode temp = (*head)->data;
-    qnode *t = *head;
+    qnode *out = *head;
     (*head) = (*head)->next;
-    free(t);
+    free(out);
     return temp;
 }
 
